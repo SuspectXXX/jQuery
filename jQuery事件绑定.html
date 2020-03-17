@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            /*
+            * 绑定事件的方式
+            * 1.eventName(fn)
+            *   编码效率略高
+            *   部分事件jQuery未实现
+            * 2.on(eventName, fn)
+            *   编码效率略低
+            *   所有js事件都可以添加
+            * 可以添加多个相同或不同类型的事件，而不会覆盖
+            * */
+            var $btn = $("button").eq(0);
+            $btn.click(function() {
+                alert("aaa");
+            });
+
+            $btn.click(function() {
+                alert("123");
+            });
+
+            $btn.mouseleave(function() {
+                alert("mouseLeave");
+            });
+
+            $btn.mouseenter(function() {
+                alert("mouseEnter");
+            });
+
+            /*$btn.on("click", function() {
+                alert("aaaa");
+            });*/
+        });
+    </script>
+</head>
+<body>
+    <button>我是按钮</button>
+</body>
+</html>

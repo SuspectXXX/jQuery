@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58d530c2-234c-476f-9463-28625a9fada2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Z4Czm4m4YYtJ445EgJtrZa9HNz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\webstorm\jQuery\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\webstorm\jQuery\images" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58d530c2-234c-476f-9463-28625a9fada2" name="Default Changelist" comment="" />
+      <created>1584089243487</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584089243487</updated>
+      <workItem from="1584089244754" duration="6260000" />
+      <workItem from="1584187070276" duration="5505000" />
+      <workItem from="1584250426332" duration="3426000" />
+      <workItem from="1584262409085" duration="8562000" />
+      <workItem from="1584321461738" duration="16857000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="234" y="150" width="1221" height="714" key="SettingsEditor" timestamp="1584252181580">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="234" y="150" width="1221" height="714" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1584252181580" />
+    <state x="814" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1584361809352">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="814" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1584361809352" />
+    <state x="875" y="347" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1584278662079">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="875" y="347" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.864@0.0.1536.864" timestamp="1584278662079" />
+  </component>
+</project>

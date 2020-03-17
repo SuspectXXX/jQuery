@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery冲突问题</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="conflict.js"></script>
+    <script>
+        // 释放$的使用权
+        // 释放操作要在编写其他jQuery代码之前编写，且释放之后不能再使用$
+        // jQuery.noConflict();
+        // jQuery(function() {
+        //     alert("asd");
+        // });
+        // 自定义一个符号
+        var kk = jQuery.noConflict();
+        kk(function() {
+           alert("kk");
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

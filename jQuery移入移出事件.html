@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            /*
+            * mouseover/mouseout
+            * 子元素被移入移出也会触发父元素的事件
+            * */
+            /*$(".father").mouseover(function() {
+                console.log("father进来了");
+            });
+            $(".father").mouseout(function() {
+                console.log("father出去了");
+            });*/
+            /*
+            * mouseenter/mouseleave
+            * 子元素被移入移出不会触发父元素的事件， 推荐使用
+            * */
+            /*$(".father").mouseenter(function() {
+                console.log("father进来了");
+            });
+            $(".father").mouseleave(function() {
+                console.log("father出去了");
+            });*/
+            /*
+            * 第一个function监听移入，第二个function监听移出
+            * 和mouseenter/mouseleave一样
+            *
+            * 当传入一个function时，即监听移入也监听移出
+            * */
+            $(".father").hover(function() {
+                console.log("father进来了");
+            }, function() {
+                console.log("father出去了");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

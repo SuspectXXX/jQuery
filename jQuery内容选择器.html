@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: red;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            // :contains(text) 找到包含指定文本内容的指定元素
+            /*var $div = $("div:contains('我是div')");
+            console.log($div);*/
+
+            // :has(selector) 找到包含指定子元素的指定元素
+            var $div = $("div:has('span')");
+            console.log($div);
+
+            // :parent 找到有文本内容或有子元素的指定元素
+            /*var $div = $("div:parent");
+            console.log($div);
+
+            // :empty 找到即没有内容也没有子元素的指定元素
+            /*var $div = $("div:empty");
+            console.log($div);*/
+
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div>我是div1</div>
+    <div>我是div2</div>
+    <div><span></span></div>
+    <div><p></p></div>
+</body>
+</html>

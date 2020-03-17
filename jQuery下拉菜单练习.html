@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 400px;
+            /*height: 300px;*/
+            border: 1px solid #000;
+            margin: 80px auto;
+            overflow: hidden;
+            text-align: center;
+        }
+        .nav1>li{
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+        }
+        .nav>li{
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+            display: none;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            $("button").eq(0).click(function() {
+                var $text = $(this).text();
+                if($text == "显示所有菜单") {
+                    $(".nav>li").slideDown(500);
+                    $(this).text("隐藏所有菜单");
+                } else {
+                    $(".nav>li").slideUp(500);
+                    $(this).text("显示所有菜单");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul class="nav1">
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+        </ul>
+        <ul class="nav">
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+            <li>菜单</li>
+        </ul>
+        <button>显示所有菜单</button>
+    </div>
+</body>
+</html>

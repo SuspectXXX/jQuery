@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            /*
+            * 1.什么是事件冒泡
+            *   子元素的点击事件会向上传递
+            * 2.如何阻止事件冒泡
+            *   在子元素的点击事件中return false
+            *       sDiv.click(function() {
+                        alert("son");
+                        return false;
+                    });
+                 或
+                 sDiv.click(function(event) {
+                        alert("son");
+                        event.stopPropagation();
+                    });
+            * 3.什么是默认行为
+            *   如a标签中的跳转，提交按钮的默认提交
+            * 4.如何阻止默认行为
+            *   给标签设置事件，在事件中 return false
+            *   $("a").click(function() {
+                    alert("弹出注册框");
+                    return false;
+                });
+                或
+                $("a").click(function(event) {
+                    alert("弹出注册框");
+                    event.preventDefault();
+                });
+            * */
+
+            /*var sDiv = $(".son");
+            var fDiv = $(".father");
+            sDiv.click(function(event) {
+                alert("son");
+                // return false;
+                event.stopPropagation();
+            });
+            fDiv.click(function() {
+                alert("father");
+            });*/
+            $("a").click(function(event) {
+                alert("弹出注册框");
+                // return false;
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <a href="http://www.baidu.com">百度一下，你就知道</a>
+    <form action="http://www.taobao.com">
+        <input type="text" />
+        <input type="submit"/>
+    </form>
+</body>
+</html>

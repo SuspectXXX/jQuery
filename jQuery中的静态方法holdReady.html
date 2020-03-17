@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        //暂停jquery入口函数的执行
+        $.holdReady(true);
+        $(function() {
+            alert("jquery");
+        });
+    </script>
+</head>
+<body>
+    <button>恢复ready</button>
+    <script>
+        var btn = document.getElementsByTagName("button")[0];
+        btn.onclick = function() {
+            $.holdReady(false);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+
+            var sDiv = $(".son");
+            var fDiv = $(".father");
+            sDiv.click(function(event) {
+                alert("son");
+                // return false;
+                // event.stopPropagation();
+            });
+            fDiv.click(function() {
+                alert("father");
+            });
+            //自动触发click事件
+            /*
+            *   fDiv.trigger("click");
+            *       会触发事件冒泡, 会触发默认行为
+            *   fDiv.triggerHandler("click");
+            *       不会触发事件冒泡，不会触发默认行为
+            * */
+            // fDiv.trigger("click");
+            sDiv.triggerHandler("click");
+            $("input[type='submit']").click(function() {
+               alert("submit");
+            });
+            $("input[type='submit']").triggerHandler("click");
+        });
+    </script>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+<a href="http://www.baidu.com">百度一下，你就知道</a>
+<form action="http://www.taobao.com">
+    <input type="text" />
+    <input type="submit"/>
+</form>
+</body>
+</html>

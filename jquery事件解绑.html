@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            var $btn = $("button").eq(0);
+            function test1() {
+                alert("aaa");
+            }
+            $btn.click(test1);
+
+            $btn.click(function() {
+                alert("123");
+            });
+
+            $btn.mouseleave(function() {
+                alert("mouseLeave");
+            });
+
+            $btn.mouseenter(function() {
+                alert("mouseEnter");
+            });
+
+            /*
+            * off()方法不传参会取消所有事件
+            *   $btn.off()
+            * 传递一个参数，会取消所有同类型的事件
+            *   $btn.off("click")
+            * 传递两个参数，会移除指定类型的指定事件
+            *   取消点击事件，且回调函数为test1的点击事件
+            *   $btn.off("click", test1);
+            * */
+            $btn.off("click", test1);
+        });
+    </script>
+</head>
+<body>
+    <button>我是按钮</button>
+</body>
+</html>

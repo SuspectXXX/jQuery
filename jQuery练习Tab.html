@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 80px auto;
+            position: relative;
+        }
+        .content>li>img{
+            width: 400px;
+            height: 300px;
+        }
+        .content>li{
+            list-style: none;
+            display: none;
+        }
+        .content>.show{
+            display: block;
+        }
+        .nav{
+            /*
+            定位：子绝父相
+            */
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+
+        }
+        .nav>li{
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            text-align: center;
+            margin-right: 5px;
+            line-height: 20px;
+            float: left;
+        }
+        .nav>.current{
+            background: #ffaaaa;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            $(".nav>li").mouseenter(function() {
+                $(this).addClass("current");
+                $(this).siblings().removeClass("current");
+                $(".content>li").eq($(this).index()).addClass("show");
+                $(".content>li").eq($(this).index()).siblings().removeClass("show");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+        <ul class="content">
+            <li class="show"><img src="images/lufei.jpg"/></li>
+            <li><img src="images/lufei.jpg"/></li>
+            <li><img src="images/lufei.jpg"/></li>
+            <li><img src="images/lufei.jpg"/></li>
+        </ul>
+        <ul class="nav">
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+</body>
+</html>

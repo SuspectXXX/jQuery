@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            /*
+            *   添加事件命名空间
+            *       1.事件必须通过on绑定，在事件后面加上.名字
+            *       2.在事件必须通过trigger或triggerHandler自动触发
+            *
+            *   注意点：
+            *       1.触发带命名空间的事件，那么父元素中带相同命名空间的事件也会触发
+            *         但不带命名空间的父元素事件不会触发
+            *       2.触发不带命名空间的事件，那么父元素中所有相同类型的事件都会触发
+            * */
+            var sDiv = $(".son");
+            sDiv.on("click.zs", function() {
+                alert("大son");
+            })
+            sDiv.on("click.ls", function() {
+                alert("小son");
+            })
+            sDiv.trigger("click.zs");
+        });
+    </script>
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+<a href="http://www.baidu.com">百度一下，你就知道</a>
+<form action="http://www.taobao.com">
+    <input type="text" />
+    <input type="submit"/>
+</form>
+</body>
+</html>

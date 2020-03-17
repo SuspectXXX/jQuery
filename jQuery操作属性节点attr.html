@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            /*
+            * 1.attr(name|pro|key,val|fn)
+            *   获取或设置属性节点的值
+            *   可以传递一个参数，也可以传递两个参数
+            *   传递一个参数代表获取，只会返回第一个元素指定的属性节点的值
+            *   传递两个代表设置，找到多少个元素就会设置多少个元素；若设置属性节点不存在，系统会自动新增
+            *
+            * 2.removeAttr(name)
+            *   删除属性节点，会删除找到的所有元素的指定属性节点
+            *   $('span').removeAttr('name');
+            *   要删除多个属性节点，以空格隔开
+            *   $('span').removeAttr('name class');
+            * */
+            // console.log($("span").attr("name", "kk"));
+            $('span').removeAttr('name class');
+        });
+    </script>
+</head>
+<body>
+    <span class="span1" name="span1"></span>
+    <span class="span2" name="span2"></span>
+</body>
+</html>

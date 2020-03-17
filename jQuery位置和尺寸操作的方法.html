@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+            border: 50px solid #000;
+            margin-left: 50px;
+            position: relative;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            var btns = document.getElementsByTagName("button");
+            var fDiv = $(".father");
+            var sDiv = $(".son");
+            btns[0].onclick = function() {
+                //获取元素宽度
+                /*console.log(fDiv.width());
+                console.log(fDiv.innerWidth());
+                console.log(fDiv.outerWidth());*/
+                /*
+                * offset([coordinates])
+                *   获取元素距离窗口的偏移位
+                * position()
+                *   获取元素距离定位元素的偏移位
+                *   该方法只能获取不能设置
+                * */
+                console.log(sDiv.offset().left);
+                console.log(sDiv.position().left);
+            }
+            btns[1].onclick = function() {
+                //设置元素宽度
+                // fDiv.width("500px");
+                /*sDiv.offset({
+                    left: 10
+                });*/
+                /*sDiv.position({
+                    left: 10
+                });*/
+                sDiv.css({
+                    left: 10
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <button>获取</button>
+    <button>设置</button>
+</body>
+</html>

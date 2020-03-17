@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // $()就代表调用jQuery的核心函数
+        // 1.接收一个函数
+        $(function() {
+            // 2.接收一个字符串
+            //     2.1 接收一个字符串选择器,返回一个jQuery对象
+            var $box1 = $(".box1");
+            var $box2 = $("#box2");
+            console.log($box1);
+            //     2.2 接收一个字符串代码片段，返回一个jQuery对象
+            // 3.接收一个DOM元素
+        });
+
+    </script>
+</head>
+<body>
+<div class="box1"></div>
+<div id="box2"></div>
+</body>
+</html>

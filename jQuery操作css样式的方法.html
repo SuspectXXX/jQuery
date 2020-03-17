@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            var $div = $("div").eq(0);
+            //逐个设置
+            $div.css("width", "100px");
+            $div.css("height", "100px");
+            $div.css("background-color", "red");
+            $div.css("border", "5px solid #000");
+            // 链式设置
+            // 链式操作如果大于3步，建议分开
+            $div.css("width", "100px").css("height", "100px").css("background-color", "blue");
+
+            // 批量设置，传入一个对象
+            $div.css({
+                width: "100px",
+                height: "100px",
+                background: "red"
+            });
+
+            // 获取css样式的值
+            console.log($div.css("width"));
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

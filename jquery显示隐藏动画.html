@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            var $btns = $("button");
+            $btns.eq(0).click(function() {
+                $("div").eq(0).show(1000, function() {
+                    alert("222");
+                });
+            });
+            $btns.eq(1).click(function() {
+                $("div").eq(0).hide(1000, function() {
+                    alert(111);
+                });
+            });
+            $btns.eq(2).click(function() {
+                $("div").toggle(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>添加</button>
+    <button>删除</button>
+    <button>更改</button>
+    <div></div>
+</body>
+</html>

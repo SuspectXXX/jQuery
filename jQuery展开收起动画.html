@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 200px;
+            margin-top: 10px;
+            background: red;
+            display: none;
+        }
+    </style>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function() {
+            var $btns = $("button");
+            $btns.eq(0).click(function() {
+                $("div").eq(0).slideDown(1000, function() {
+                    alert("111");
+                });
+            });
+            $btns.eq(1).click(function() {
+                $("div").eq(0).slideUp(1000);
+            });
+            $btns.eq(2).click(function() {
+                $("div").eq(0).slideToggle(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>展开</button>
+    <button>收起</button>
+    <button>切换</button>
+    <div></div>
+</body>
+</html>
